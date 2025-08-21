@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-md border border-transparent px-4 py-2 text-sm font-semibold transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-500;
+  }
+  .btn-primary {
+    @apply btn bg-brand-500 text-white;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-brand-700 hover:bg-brand-50;
+  }
+  .chip {
+    @apply rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700;
+  }
+}
+@layer utilities {
+  .bg-brand-50 { background-color: #f0f9ff; }
+  .bg-brand-500 { background-color: #3b82f6; }
+  .text-brand-700 { color: #1e40af; }
+  .text-brand-500 { color: #3b82f6; }
+}
